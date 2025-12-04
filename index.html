@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </style>
+  
+</head>
+<body>
+ <header class="main-header">
+  <div class="logo"> <a href="login.html">Fauzi</a></div>
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="web gw.html">Home</a></li>
+      <li><a href="About.html" class="active">About Us</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hamburger" id="hamburger">
+     <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+  </div>
+</header>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Hello, I'm <small>Muhammad Fauzi</small></h2>
+      <h1>UI/UX Designer & Web Developer</h1>
+      <p>I am a person who is very interested in layout design. In my opinion, presenting an attractive website is a concern in developing branding for a product or company. To zcreate a good website, I focus on composition and details the right website to be more professional. For now, I am developing skills to obtain quality web UI/UX for dynamic applications and web development.</p>
+      <a href="#" class="btn">Hire Me</a>
+      <a href="#" class="btn btn-outline">Download CV</a>
+    </div Class="img">
+    <img src="img/foto gw.jpg" alt="Profile">
+  </section>
+
+
+<section id="about">
+  <div class="about-container">
+    
+    <!-- Foto sebelah kiri -->
+    <div class="about-photo photo-animate">
+      <img src="img/foto gw.jpg" alt="Foto Fauzi">
+    </div>
+    
+    <!-- Teks sebelah kanan -->
+    <div class="about-text text-animate">
+      <h2>About Me</h2>
+      <p>
+        Halo, saya <strong>Muhammad Fauzi</strong> seorang UI/UX Designer & Web Developer. 
+        Saya suka membuat desain dan website modern, responsif, 
+        serta user-friendly.
+      </p>
+      <a href="#projects" class="btn pulse">Lihat Project</a>
+
+      <!-- Ikon Sosial Media -->
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== Kufra Grafik Mini ===== -->
+<section class="skills-mini-section" id="skills">
+  <div class="skills-mini-container">
+    <h2 class="skills-title">Kufra Grafik</h2>
+    <p class="skills-subtitle">Perkembangan kemampuan saya 💡</p>
+    <div class="skills-chart-box">
+      <canvas id="skillsMiniChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Script Grafik -->
+<script>
+const ctx = document.getElementById('skillsMiniChart');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['2021', '2022', '2023', '2024', '2025'],
+    datasets: [
+      {
+        label: 'HTML',
+        data: [70, 80, 90, 95, 97],
+        borderColor: '#00ffff',
+        tension: 0.4,
+        fill: false,
+        pointBackgroundColor: '#00ffff',
+        pointRadius: 4,
+      },
+      {
+        label: 'CSS',
+        data: [65, 78, 88, 92, 95],
+        borderColor: '#ff66ff',
+        tension: 0.4,
+        fill: false,
+        pointBackgroundColor: '#ff66ff',
+        pointRadius: 4,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { labels: { color: '#fff', boxWidth: 12, font: { size: 12 } } },
+      title: { display: false }
+    },
+    scales: {
+      x: {
+        ticks: { color: '#ccc', font: { size: 10 } },
+        grid: { color: 'rgba(255,255,255,0.05)' }
+      },
+      y: {
+        ticks: { color: '#ccc', font: { size: 10 } },
+        grid: { color: 'rgba(255,255,255,0.05)' },
+        beginAtZero: true,
+        max: 100
+      }
+    }
+  }
+});
+</script>
+
+
+  <section class="projects">
+  <h2>My Projects</h2>
+  <div class="project-grid">
+    <div class="card">
+      <img src="img/foto wa.jpg" alt="Project 1">
+      <div class="overlay">
+        <h3>Web Design</h3>
+        <p>Desain website modern dan responsif.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/foto gw.jpg" alt="Project 2">
+      <div class="overlay">
+        <h3>App UI/UX</h3>
+        <p>Desain aplikasi mobile yang user friendly.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/foto gw.jpg" alt="Project 3">
+      <div class="overlay">
+        <h3>E-Commerce</h3>
+        <p>Toko online dengan fitur lengkap.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="img/foto wa.jpg" alt="Project 4">
+      <div class="overlay">
+        <h3>Portfolio</h3>
+        <p>Website portfolio personal kreatif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="testimonials">
+  <h2>What People Say</h2>
+  <div class="testimonials-container">
+    
+    <div class="testimonial-card">
+      <p>"Fauzi adalah developer yang sangat profesional dan komunikatif. Hasil kerjanya selalu rapi dan tepat waktu!"</p>
+      <div class="author">
+        <img src="img/foto gw.jpg" alt="Client 1">
+        <h4>Andi Wijaya</h4>
+        <span>Project Manager</span>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Sangat kreatif dalam mendesain UI/UX. Website kami jadi lebih modern dan user-friendly."</p>
+      <div class="author">
+        <img src="img/foto gw.jpg" alt="Client 2">
+        <h4>Siti Rahma</h4>
+        <span>Entrepreneur</span>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Fauzi selalu punya solusi untuk setiap masalah teknis. Recommended banget buat kerja sama jangka panjang."</p>
+      <div class="author">
+        <img src="img/foto gw.jpg" alt="Client 3">
+        <h4>Michael Tan</h4>
+        <span>Startup Founder</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+   <!-- ===== Articles Section ===== -->
+<section class="articles" id="articles">
+  <div class="articles-container">
+    <h2 class="section-title">Latest Articles</h2>
+    <p class="section-subtitle">Baca cerita, tips, dan inspirasi dari perjalanan saya di dunia web & desain ✨</p>
+
+    <div class="articles-grid">
+      <!-- Artikel 1 -->
+      <div class="article-card">
+        <img src="img/article1.jpg" alt="Article 1">
+        <div class="article-content">
+          <h3>Bagaimana Saya Membangun Portfolio Interaktif</h3>
+          <p>Menceritakan langkah-langkah dan tools yang saya gunakan untuk membangun website portfolio yang menarik dan responsif.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Artikel 2 -->
+      <div class="article-card">
+        <img src="img/article2.jpg" alt="Article 2">
+        <div class="article-content">
+          <h3>Tips Membuat Desain UI yang Elegan</h3>
+          <p>Beberapa prinsip desain modern yang bisa kamu terapkan untuk meningkatkan tampilan dan pengalaman pengguna.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </div>
+
+      <!-- Artikel 3 -->
+      <div class="article-card">
+        <img src="img/article3.jpg" alt="Article 3">
+        <div class="article-content">
+          <h3>Rahasia Di Balik Animasi Website yang Halus</h3>
+          <p>Membahas cara membuat animasi lembut dengan CSS dan JavaScript agar website terlihat hidup dan profesional.</p>
+          <a href="#" class="read-more">Baca Selengkapnya →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section class="contact">
+  <h2>Get in Touch</h2>
+  <div class="contact-container">
+
+    <!-- Kiri: Info -->
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3>Address</h3>
+          <p>Perum Bumi Kahuripan Indah Jl.Arjuna 3 Blok E3 NO.49, Bekasi, Indonesia</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h3>Phone</h3>
+          <p>+62 857-8001-1828</p>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>fauzi10706@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kanan: Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+  <footer class="footer">
+  <div class="footer-container">
+    <!-- Kolom 1 -->
+    <div class="footer-about">
+      <h3>Fauzi_11</h3>
+      <p>Web Developer & UI/UX Designer. Membuat website modern, responsif, dan menarik.</p>
+    </div>
+
+    <!-- Kolom 2 -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+      
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div class="footer-social">
+      <h4>Follow Me</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Fauzi Portfolio | All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+ <script src="main.js"></script>
+</html>
