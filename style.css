@@ -166,8 +166,9 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-}
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+  }
 
 .main-header .logo:hover {
   transform: scale(1.05);
@@ -1650,3 +1651,4 @@ body {
     font-size: 2.2rem;
   }
 }
+
